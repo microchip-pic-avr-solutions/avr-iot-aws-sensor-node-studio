@@ -1,0 +1,822 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATmega4808</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>AVRIoT</AssemblyName>
+    <Name>AVRIoT</Name>
+    <RootNamespace>AVRIoT</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.47.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.nedbg</avrtool>
+    <avrtoolserialnumber>ATML3203081800006037</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x1E9650</avrdeviceexpectedsignature>
+    <avrtoolinterface>UPDI</avrtoolinterface>
+    <com_atmel_avrdbg_tool_nedbg>
+      <ToolOptions>
+        <InterfaceProperties>
+          <UpdiClock>750000</UpdiClock>
+        </InterfaceProperties>
+        <InterfaceName>UPDI</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.nedbg</ToolType>
+      <ToolNumber>ATML3203081800006037</ToolNumber>
+      <ToolName>nEDBG</ToolName>
+    </com_atmel_avrdbg_tool_nedbg>
+    <avrtoolinterfaceclock>750000</avrtoolinterfaceclock>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.Device>-mmcu=atmega4808 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.4.331\gcc\dev\atmega4808"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.4.331\include</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.4.331\include</Value>
+    </ListValues>
+  </avrgcc.assembler.general.IncludePaths>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.Device>-mmcu=atmega4808 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.4.331\gcc\dev\atmega4808"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../generated_files</Value>
+      <Value>../generated_files/mqtt</Value>
+      <Value>../generated_files/CryptoAuthenticationLibrary</Value>
+      <Value>../generated_files/drivers</Value>
+      <Value>../generated_files/winc</Value>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.4.331\include</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -Wno-pragmas</avrgcc.compiler.miscellaneous.OtherFlags>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.4.331\include</Value>
+    </ListValues>
+  </avrgcc.assembler.general.IncludePaths>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="generated_files/cli/cli.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/cloud/crypto_client/crypto_client.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/cloud/cloud_service.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/cloud/wifi_service.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/cloud/mqtt_service.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/cloud/cloud_interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/config/clock_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/config/conf_winc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/config/IoT_Sensor_Node_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/config/cloud_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/config/mqtt_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/credentials_storage/credentials_storage.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atcacert/atcacert.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atcacert/atcacert_client.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atcacert/atcacert_date.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atcacert/atcacert_def.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atcacert/atcacert_der.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atcacert/atcacert_host_hw.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atcacert/atcacert_host_sw.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atcacert/atcacert_pem.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_helpers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/crypto/hashes/sha1_routines.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/crypto/hashes/sha2_routines.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/crypto/atca_crypto_sw.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/crypto/atca_crypto_sw_ecdsa.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/crypto/atca_crypto_sw_rand.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/crypto/atca_crypto_sw_sha1.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/crypto/atca_crypto_sw_sha2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/hal/atca_hal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/hal/atca_i2c_hal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/hal/atca_start_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/hal/atca_start_iface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/host/atca_host.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/jwt/atca_jwt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atca_bool.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atca_cfgs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atca_command.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atca_compiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atca_device.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atca_devtypes.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atca_execution.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atca_iface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atca_status.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/drivers/spi_master.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/drivers/timeout.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/drivers/i2c_simple_master.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/drivers/uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/include/cpuint.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/include/port.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/include/rtc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/include/pin_manager.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/include/rstctrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/include/spi0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/include/protected_io.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/include/ccp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/include/twi0_master.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/include/usart2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/include/adc0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/mqtt/mqtt_comm_bsd/mqtt_comm_layer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/mqtt/mqtt_core/mqtt_core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/mqtt/mqtt_packetTransfer_interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/mqtt/mqtt_winc_adapter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/utils/assembler/iar.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/utils/assembler/gas.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/utils/compiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/utils/utils.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/utils/interrupt_avr8.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/utils/utils_assert.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/utils/assembler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/utils/atomic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/common/winc_defines.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/common/winc_registers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/common/ecc_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/common/winc_debug.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/common/winc_1500_3A0_registers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/driver/winc_spi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/driver/winc_adapter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/driver/winc_drv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/driver/winc_asic.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/driver/winc_hif.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/include/conf_winc_defaults.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/include/winc_legacy.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/include/winc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/m2m/m2m_wifi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/m2m/m2m_ssl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/m2m/m2m_periph.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/m2m/m2m_ota.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/m2m/m2m_socket_host_if.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/m2m/m2m_fwinfo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/m2m/m2m_crypto.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/m2m/m2m_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/socket/socket.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/spi_flash/flexible_flash.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/spi_flash/spi_flash_map.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/spi_flash/spi_flash.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/delay.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/mcc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/application_manager.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/debug_print.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/led.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/sensors_handling.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/time_service.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/banner.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/cryptoauthlib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/CryptoAuth_init.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/cryptoauthlib_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/cli/cli.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/cloud/crypto_client/crypto_client.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/cloud/cloud_service.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/cloud/wifi_service.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/cloud/mqtt_service.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/cloud/aws_cloud_service.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/credentials_storage/credentials_storage.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atcacert/atcacert_client.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atcacert/atcacert_date.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atcacert/atcacert_def.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atcacert/atcacert_der.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atcacert/atcacert_host_hw.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atcacert/atcacert_host_sw.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atcacert/atcacert_pem.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_checkmac.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_counter.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_derivekey.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_ecdh.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_gendig.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_genkey.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_hmac.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_info.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_kdf.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_lock.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_mac.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_nonce.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_privwrite.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_random.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_read.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_secureboot.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_selftest.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_sha.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_sign.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_updateextra.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_verify.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_basic_write.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/basic/atca_helpers.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/crypto/hashes/sha1_routines.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/crypto/hashes/sha2_routines.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/crypto/atca_crypto_sw_ecdsa.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/crypto/atca_crypto_sw_rand.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/crypto/atca_crypto_sw_sha1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/crypto/atca_crypto_sw_sha2.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/hal/atca_hal.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/hal/atca_i2c_hal.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/hal/hal_i2c_timer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/host/atca_host.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/jwt/atca_jwt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atca_cfgs.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atca_command.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atca_device.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atca_execution.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/atca_iface.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/drivers/spi_master.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/drivers/timeout.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/drivers/i2c_simple_master.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/drivers/uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/mqtt/mqtt_comm_bsd/mqtt_comm_layer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/mqtt/mqtt_core/mqtt_core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/mqtt/mqtt_exchange_buffer/mqtt_exchange_buffer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/mqtt/mqtt_packetTransfer_interface.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/mqtt/mqtt_winc_adapter.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/src/pin_manager.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/src/cpuint.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/src/spi0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/src/rtc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/src/twi0_master.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/src/adc0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/src/usart2.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/driver/winc_spi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/driver/winc_adapter.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/driver/winc_hif.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/driver/winc_asic.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/driver/winc_drv.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/m2m/m2m_ssl.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/m2m/m2m_wifi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/m2m/m2m_periph.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/m2m/m2m_ota.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/m2m/m2m_fwinfo.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/m2m/m2m_crypto.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/socket/socket.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/spi_flash/flexible_flash.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/winc/spi_flash/spi_flash.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/mcc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/delay.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/device_config.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/application_manager.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/debug_print.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/led.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/sensors_handling.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/time_service.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files/CryptoAuthenticationLibrary/CryptoAuth_init.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="generated_files\src\protected_io.S">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="generated_files\" />
+    <Folder Include="generated_files\cli\" />
+    <Folder Include="generated_files\cloud\" />
+    <Folder Include="generated_files\cloud\crypto_client\" />
+    <Folder Include="generated_files\config\" />
+    <Folder Include="generated_files\credentials_storage\" />
+    <Folder Include="generated_files\CryptoAuthenticationLibrary\" />
+    <Folder Include="generated_files\CryptoAuthenticationLibrary\atcacert\" />
+    <Folder Include="generated_files\CryptoAuthenticationLibrary\basic\" />
+    <Folder Include="generated_files\CryptoAuthenticationLibrary\crypto\" />
+    <Folder Include="generated_files\CryptoAuthenticationLibrary\crypto\hashes\" />
+    <Folder Include="generated_files\CryptoAuthenticationLibrary\hal\" />
+    <Folder Include="generated_files\CryptoAuthenticationLibrary\host\" />
+    <Folder Include="generated_files\CryptoAuthenticationLibrary\jwt\" />
+    <Folder Include="generated_files\docs\" />
+    <Folder Include="generated_files\docs\mqtt_documentation\" />
+    <Folder Include="generated_files\docs\winc_documentation\" />
+    <Folder Include="generated_files\drivers\" />
+    <Folder Include="generated_files\include\" />
+    <Folder Include="generated_files\mqtt\" />
+    <Folder Include="generated_files\mqtt\mqtt_comm_bsd\" />
+    <Folder Include="generated_files\mqtt\mqtt_comm_tcpipLite\" />
+    <Folder Include="generated_files\mqtt\mqtt_core\" />
+    <Folder Include="generated_files\mqtt\mqtt_exchange_buffer\" />
+    <Folder Include="generated_files\mqtt\nvmem_abstractionLayer\" />
+    <Folder Include="generated_files\src\" />
+    <Folder Include="generated_files\utils\" />
+    <Folder Include="generated_files\utils\assembler\" />
+    <Folder Include="generated_files\winc\" />
+    <Folder Include="generated_files\winc\common\" />
+    <Folder Include="generated_files\winc\driver\" />
+    <Folder Include="generated_files\winc\include\" />
+    <Folder Include="generated_files\winc\m2m\" />
+    <Folder Include="generated_files\winc\socket\" />
+    <Folder Include="generated_files\winc\spi_flash\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="generated_files\CryptoAuthenticationLibrary\basic\README.md">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="generated_files\CryptoAuthenticationLibrary\crypto\README.md">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="generated_files\CryptoAuthenticationLibrary\MicrochipDisclaimer">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="generated_files\CryptoAuthenticationLibrary\readme.md">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="generated_files\docs\mqtt_documentation\Microchip MQTT Client Library.docx">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="generated_files\docs\mqtt_documentation\MQTT Readme.md">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="generated_files\docs\winc_documentation\WINC1500_IoT_SW_APIs.chm">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="generated_files\mqtt\readme.md">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="generated_files\winc\readme.md">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
