@@ -11,10 +11,11 @@ Devices: \| **ATmega4808(MCU)** \| **WINC1510(Wi-Fi®)** \| **ECC608(CryptoAuthL
 ## Requirements
 
 + **Atmel Studio v7.0 or later**:
-tudio 7 is the integrated development platform (IDP) for developing and debugging all AVR® and SAM microcontroller applications. The Atmel Studio 7 IDP gives you a seamless and easy-to-use environment to write, build and debug your applications written in C/C++ or assembly code. It also connects seamlessly to the debuggers, programmers and development kits that support AVR® and SAM devices.
+Studio 7 is the integrated development platform (IDP) for developing and debugging all AVR® and SAM microcontroller applications. The Atmel Studio 7 IDP gives you a seamless and easy-to-use environment to write, build and debug your applications written in C/C++ or assembly code. It also connects seamlessly to the debuggers, programmers and development kits that support AVR® and SAM devices.
 For the latest version, please refer to: [Studio](https://www.microchip.com/mplab/avr-support/atmel-studio-7)
 
-The Atmel AVR 8-bit GNU Toolchain (3.6.1.1750) supports all AVR 8-bit devices. The AVR 8-bit Toolchain is based on the free and open-source GCC compiler. The toolchain includes compiler, assembler, linker and binutils (GCC and Binutils), Standard C library (AVR-libc) and GNU Debugger (GDB).
++ **The Atmel AVR 8-bit GNU Toolchain v3.6.1.1750  or later**: 
+AVR 8-bit GNU Toolchain supports all AVR 8-bit devices. The AVR 8-bit Toolchain is based on the free and open-source GCC compiler. The toolchain includes compiler, assembler, linker and binutils (GCC and Binutils), Standard C library (AVR-libc) and GNU Debugger (GDB). The Atmel AVR GNU Toolchain is also available as part of Atmel Studio.
 
 + **AVR IoT Development Board**:
 The AVR-IoT development board combines a powerful 8-bit ATmega4808 MCU, an ATECC608A CryptoAuthentication™ secure element IC and the fully certified ATWINC1510 Wi-Fi® network controller - which provides the most simple and effective way to connect your embedded application to a cloud platform. The board also includes an on-board debugger and requires no external hardware to program and debug the MCU.
