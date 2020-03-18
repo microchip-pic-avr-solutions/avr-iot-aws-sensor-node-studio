@@ -107,15 +107,15 @@ General Out-Of-Box operation is as described below:
 #### The data received over the subscribed topic is displayed on a serial terminal.
 
 ### Sending MQTT publish packets  
-+ The C code for sending MQTT publish packets is available in AVRIoT.X/mcc_generated_files/application_manager.c file.
++ The C code for sending MQTT publish packets is available in AVRIoT.X/generated_files/application_manager.c file.
 + The API ``static void sendToCloud(void)`` is responsible for publishing data at an interval of 1 second.
 
 ### Sending MQTT subscribe packets
-+ The C code for sending MQTT subscribe packets is available in AVRIoT.X/mcc_generated_files/application_manager.c file.
++ The C code for sending MQTT subscribe packets is available in AVRIoT.X/generated_files/application_manager.c file.
 + The API ``static void subscribeToCloud(void)`` is responsible for sending MQTT subscribe packets to the cloud after MQTT connection is established.
 
 ### Processing Packets received over subscribed topic
-+ The C code for processing MQTT publish packets received over the subscribed topic is available in AVRIoT.X/mcc_generated_files/application_manager.c file.
++ The C code for processing MQTT publish packets received over the subscribed topic is available in AVRIoT.X/generated_files/application_manager.c file.
 + The ``static void receivedFromCloud(uint8_t *topic, uint8_t *payload)`` function is used for processing packets published over the subscribed topic.
 
 ---
@@ -329,8 +329,7 @@ which eliminates any potential backdoors linked to software weaknesses.
 MQTT is a lightweight M2M (Machine to Machine) messaging protocol used to exchange data between devices.
 This is an established protocol, additional references can found through [MQTT.org](http://mqtt.org)
 
-The version used with the demostration is a generated software library produced through the
-[MPLAB Code Configurator](https://www.microchip.com/mplab/mplab-code-configurator) (MCC) tool, and has been written by Microchip for use family of devices.
+The version used with the demostration is a hardware-agnostic software library and has been written by Microchip.
 
 ---
 
