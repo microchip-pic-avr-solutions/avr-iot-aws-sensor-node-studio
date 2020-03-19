@@ -361,7 +361,7 @@ General Out-Of-Box operation is as described below:
 **wifi Security Options:**
 + 0 : Open - Password and Security option parameters are not required.
 + 1 : WPA/WPA2 - Security Option Parameter not required.
-+ 2: WEP -
++ 2: WEP - Network Name, Password, and Security Option (3) Parameter are required when connecting to a WEP network. For example, ‘wifi MCHP.IOT,microchip,3’.
 
 **debug Debug Options:**
 Type in a number from 0 to 4; for the number of debug messages with 0 - the result is printing no messages and with 4 for printing all the messages.
