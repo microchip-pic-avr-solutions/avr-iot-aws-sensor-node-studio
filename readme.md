@@ -45,7 +45,7 @@ Devices: \| **ATmega4808(MCU)** \| **WINC1510(Wi-Fi®)** \| **ECC608(CryptoAuthL
   6. After successfully establishing MQTT connection, the **YELLOW LED** will blink. (250 mSec)
      + Indicating data exchanged between the End-Device (AVR-IoT), and BROKER (AWS). (every (1) Sec)
 
-  7. Connect to the www.avr-iot.com/avr-iot/aws/**{thingName}**, or www.pic-iot.com/avr-iot/aws/**{thingName}**, device specific website to view publish/subscribe data. 
+  7. Connect to the www.avr-iot.com/avr-iot/aws/**{thingName}** website to view publish/subscribe data. 
      + **{thingName}** is the unique identifier for the development board.
      + This page can be also be found via launching the **CLICK-ME.HTM** file on the **CURIOSITY** device.
      + This page can be also be found by scanning the QR code on the back of the development board. 
