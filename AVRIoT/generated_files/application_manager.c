@@ -191,7 +191,7 @@ void application_init()
     CLI_setdeviceId(attDeviceID);
 #endif   
     debug_setPrefix(attDeviceID);     
-    wifi_readThingIdFromWinc();
+    wifi_readThingNameFromWinc();
     wifi_readAWSEndpointFromWinc();
     timeout_create(&initDeviceShadowTimer, DEVICE_SHADOW_INIT_INTERVAL );    
     // Blocking debounce
