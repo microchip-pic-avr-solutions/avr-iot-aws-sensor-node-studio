@@ -92,7 +92,7 @@ cloudContext_t cloudContext =
 };
 
 
-void CLOUD_setInitFlag(void)
+void CLOUD_reset(void)
 {
     debug_printError("CLOUD: Cloud Reset");
     cloudStatus.cloudInitialized = false;
@@ -130,7 +130,7 @@ bool CLOUD_checkIsConnected(void)
 uint32_t mqttTimeoutTask(void *payload) 
 {
     debug_printError("CLOUD: MQTT Connection Timeout");
-    CLOUD_setInitFlag();
+    CLOUD_reset();
     
     cloudStatus.waitingForMQTT = false;
     

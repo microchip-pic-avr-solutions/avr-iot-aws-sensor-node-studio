@@ -298,7 +298,7 @@ static void get_thing_id(char *pArg)
     }
     else
     {
-        printf("Error getting Thing ID.\r\n\4");
+        printf("Error getting Thing Name.\r\n\4");
     }
 }
 

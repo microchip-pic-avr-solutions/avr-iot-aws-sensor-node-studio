@@ -394,6 +394,6 @@ static void  wifiConnectionStateChanged(uint8_t status)
     if (status != 1)
     {
         // Restart the WIFI module if we get disconnected from the WiFi Access Point (AP)
-        CLOUD_setInitFlag();
+        CLOUD_reset();
     } 
 }
