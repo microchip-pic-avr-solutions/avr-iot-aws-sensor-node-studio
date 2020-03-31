@@ -76,7 +76,7 @@ static void command_received(char *command_text);
 static void reset_cmd(char *pArg);
 static void reconnect_cmd(char *pArg);
 static void set_wifi_auth(char *ssid_pwd_auth);
-static void get_thing_id(char *pArg);
+static void get_thing_name(char *pArg);
 static void get_device_id(char *pArg);
 static void get_cli_version(char *pArg);
 static void get_firmware_version(char *pArg);
@@ -100,7 +100,7 @@ const struct cmd commands[] =
     { "reset",       reset_cmd},
     { "reconnect",   reconnect_cmd },
     { "wifi",        set_wifi_auth },
-    { "thing",       get_thing_id },
+    { "thing",       get_thing_name },
     { "device",      get_device_id },
     { "cli_version", get_cli_version },
     { "version",     get_firmware_version },
@@ -288,7 +288,7 @@ static void set_debug_level(char *pArg)
    }
 }
 
-static void get_thing_id(char *pArg)
+static void get_thing_name(char *pArg)
 {
     (void)pArg;
         
