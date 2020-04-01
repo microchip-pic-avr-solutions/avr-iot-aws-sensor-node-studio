@@ -61,7 +61,6 @@ typedef enum
    LEVEL_ERROR
 }debug_errorLevel_t;
 
-#include "banner.h"
 
 #define IOT_DEBUG_PRINT CFG_DEBUG_MSG
 
