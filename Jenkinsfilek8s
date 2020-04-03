@@ -15,7 +15,7 @@ pipeline {
 	
 	environment {		
 		GITHUB_URL ='https://github.com/microchip-pic-avr-solutions/avr-iot-aws-sensor-node-studio.git'
-		BITBUCKET_URL = 'https://bitbucket.microchip.com/scm/mpas/avr-iot-aws-sensor-node-studio.git'
+		BITBUCKET_URL = 'https://bitbucket.microchip.com/scm/m8a/avr-iot-aws-sensor-node-studio.git'
 		DEPLOY_TOOL_URL = 'https://bitbucket.microchip.com/scm/citd/tool-github-deploy.git'
 		DEPLOY_SCRIPT_DIR = 'tool-github-deploy'
 		DEPLOY_SCRIPT_FILE = 'deploy-source-as-is.sh'
