@@ -9,7 +9,7 @@ pipeline {
 
     parameters {
         string( name: 'NOTIFICATION_EMAIL',
-                defaultValue:  'PICAVR_Examples_GateKeepers@microchip.com',
+                defaultValue:  'LibraryDevTeam_MCU8@microchip.com',
                 description: "Email to send build failure, fixed and successful deployment notifications.")
     }
 	
