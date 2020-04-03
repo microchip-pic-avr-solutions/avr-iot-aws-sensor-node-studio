@@ -63,7 +63,7 @@ pipeline {
             }
         }
         always {
-            archiveArtifacts artifacts: "tool-mplabx-c-build/output/**", allowEmptyArchive: true, fingerprint: true
+            archiveArtifacts artifacts: "tool-github-deploy/output/**", allowEmptyArchive: true, fingerprint: true
         }
     }
 }
