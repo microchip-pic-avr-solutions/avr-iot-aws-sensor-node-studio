@@ -70,7 +70,7 @@ Devices: \| **ATmega4808(MCU)** \| **WINC1510(Wi-Fi®)** \| **ECC608(CryptoAuthL
       ![AwsLearnMore](images/awsLearnMore.png)
 
   12. By default only a **Toggle** feature is demostrated.
-     + **Custome implmentations are described further on above the panel.**
+     + **Custom implmentations are described further on above the panel.**
 
       ![AwsControl](images/awsControl.png)
 
